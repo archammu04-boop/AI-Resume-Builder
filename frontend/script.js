@@ -19,7 +19,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
             "<p>Analyzing ATS Score...</p>";
 
         // Generate Resume
-        const resumeResponse = await fetch("http://127.0.0.1:8000/generate", {
+        const resumeResponse = await fetch("https://ai-resume-builder-od8z.onrender.com/generate", {
 
             method: "POST",
 
@@ -37,7 +37,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
             marked.parse(resumeResult.resume);
 
         // Generate ATS Score
-        const atsResponse = await fetch("http://127.0.0.1:8000/ats", {
+        const atsResponse = await fetch("https://ai-resume-builder-od8z.onrender.com/ats", {
 
             method: "POST",
 
@@ -120,7 +120,7 @@ document.getElementById("improveBtn").addEventListener("click", async () => {
         document.getElementById("improved-output").innerHTML =
             "<p>Improving Resume...</p>";
 
-        const response = await fetch("http://127.0.0.1:8000/improve", {
+        const response = await fetch("https://ai-resume-builder-od8z.onrender.com/improve", {
 
             method: "POST",
 
@@ -168,7 +168,7 @@ document.getElementById("coverBtn").addEventListener("click", async () => {
         document.getElementById("cover-output").innerHTML =
             "<p>Generating Cover Letter...</p>";
 
-        const response = await fetch("http://127.0.0.1:8000/cover-letter", {
+        const response = await fetch("https://ai-resume-builder-od8z.onrender.com/cover-letter", {
 
             method: "POST",
 
@@ -213,7 +213,7 @@ document.getElementById("linkedinBtn").addEventListener("click", async () => {
         document.getElementById("linkedin-output").innerHTML =
             "<p>Generating LinkedIn Summary...</p>";
 
-        const response = await fetch("http://127.0.0.1:8000/linkedin", {
+        const response = await fetch("https://ai-resume-builder-od8z.onrender.com/linkedin", {
 
             method: "POST",
 
