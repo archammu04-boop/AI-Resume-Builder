@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+    <h1>AI Resume Builder</h1>
+
+    <p>
+        Build ATS-friendly resumes, improve your profile, generate cover letters,
+        and create LinkedIn summaries using Google Gemini AI.
+    </p>
+
+</div>
+
+    <div class="left-panel">
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label>Phone Number</label>
+        <input type="text" id="phone" placeholder="Enter your phone number">
+
+        <label>Education</label>
+        <textarea id="education"></textarea>
+
+        <label>Skills</label>
+        <textarea id="skills"></textarea>
+
+        <label>Projects</label>
+        <textarea id="projects"></textarea>
+
+        <label>Experience</label>
+        <textarea id="experience"></textarea>
+
+        <button id="generateBtn">
+            Generate Resume
+        </button>
+
+        <button id="downloadBtn">
+            Download Resume
+        </button>
+
+        <button id="improveBtn">
+            Improve Resume
+        </button>
+
+        <button id="coverBtn">
+            Generate Cover Letter
+        </button>
+
+        <button id="linkedinBtn">
+            Generate LinkedIn Summary
+        </button>
+
+    </div>
+
+    <div class="output">
+
+    <h2>Generated Resume</h2>
+
+    <div id="resume-output">
+        Your AI-generated resume will appear here...
+    </div>
+
+    <hr style="margin:35px 0;">
+
+    <h2>ATS Score</h2>
+
+    <div id="ats-output">
+        Your ATS score and suggestions will appear here...
+    </div>
+
+    <hr style="margin:35px 0;">
+
+<h2>Improved Resume</h2>
+
+<div id="improved-output">
+
+    Your improved resume will appear here...
+
+</div>
+
+<hr style="margin:35px 0;">
+
+<h2>Cover Letter</h2>
+
+<div id="cover-output">
+
+    Your AI-generated cover letter will appear here...
+
+</div>
+
+<hr style="margin:35px 0;">
+
+<h2>LinkedIn Summary</h2>
+
+<div id="linkedin-output">
+
+    Your LinkedIn summary will appear here...
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
