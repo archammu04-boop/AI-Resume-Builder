@@ -1,3 +1,4 @@
+const API_BASE_URL = "http://127.0.0.1:8000";
 document.getElementById("generateBtn").addEventListener("click", async () => {
 
     const data = {
@@ -19,7 +20,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
             "<p>Analyzing ATS Score...</p>";
 
         // Generate Resume
-        const resumeResponse = await fetch("https://ai-resume-builder-od8z.onrender.com/generate", {
+        const resumeResponse = await fetch(`${API_BASE_URL}/generate`, {
 
             method: "POST",
 
@@ -37,8 +38,8 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
             marked.parse(resumeResult.resume);
 
         // Generate ATS Score
-        const atsResponse = await fetch("https://ai-resume-builder-od8z.onrender.com/ats", {
-
+        
+        const atsResponse=await fetch(`${API_BASE_URL}/ats`, {
             method: "POST",
 
             headers: {
@@ -120,7 +121,7 @@ document.getElementById("improveBtn").addEventListener("click", async () => {
         document.getElementById("improved-output").innerHTML =
             "<p>Improving Resume...</p>";
 
-        const response = await fetch("https://ai-resume-builder-od8z.onrender.com/improve", {
+        const response=await fetch(`${API_BASE_URL}/improve`, {
 
             method: "POST",
 
@@ -168,7 +169,7 @@ document.getElementById("coverBtn").addEventListener("click", async () => {
         document.getElementById("cover-output").innerHTML =
             "<p>Generating Cover Letter...</p>";
 
-        const response = await fetch("https://ai-resume-builder-od8z.onrender.com/cover-letter", {
+        const response=await fetch(`${API_BASE_URL}/cover-letter`, {
 
             method: "POST",
 
@@ -213,7 +214,7 @@ document.getElementById("linkedinBtn").addEventListener("click", async () => {
         document.getElementById("linkedin-output").innerHTML =
             "<p>Generating LinkedIn Summary...</p>";
 
-        const response = await fetch("https://ai-resume-builder-od8z.onrender.com/linkedin", {
+        const response=await fetch(`${API_BASE_URL}/linkedin`, {
 
             method: "POST",
 
