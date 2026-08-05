@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://13.232.140.179:8000";
+const API_BASE_URL = "";
 document.getElementById("generateBtn").addEventListener("click", async () => {
 
     const data = {
